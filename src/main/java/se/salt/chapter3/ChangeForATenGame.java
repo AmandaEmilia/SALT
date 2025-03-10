@@ -26,6 +26,8 @@ public class ChangeForATenGame {
         System.out.println("How many fives (5) do you have?");
         double infoFives = sc.nextDouble();
 
+        sc.close();
+
         double totalSumCoins =
                 (infoHalfs * half) + (infoOnes * one) + (infoTwos * two) + (infoFives * five);
 
