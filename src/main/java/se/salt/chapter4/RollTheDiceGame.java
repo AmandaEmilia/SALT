@@ -1,7 +1,6 @@
 package se.salt.chapter4;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class RollTheDiceGame {
 
