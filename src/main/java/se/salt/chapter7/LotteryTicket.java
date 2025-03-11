@@ -1,4 +1,4 @@
-package se.salt;
+package se.salt.chapter7;
 
 import java.util.Random;
 
