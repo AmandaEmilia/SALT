@@ -6,6 +6,11 @@ public class Cake {
 
     protected int price;
 
+    public Cake(){
+        setFlavor("Strawberry");
+        setPrice(200);
+    }
+
     public String getFlavor() {
         return flavor;
     }
