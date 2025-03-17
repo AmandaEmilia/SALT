@@ -1,8 +1,12 @@
 package se.salt.chapter9;
 
-public class BirthdayCake extends Cake{
+public class BirthdayCake extends Cake {
 
     protected int candles;
+
+    public BirthdayCake() {
+        super("Blueberry", 300);
+    }
 
     public int getCandles() {
         return candles;
