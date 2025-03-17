@@ -7,9 +7,11 @@ public class Cake {
     protected int price;
 
     public Cake(String flavor, int price) {
+        this.flavor = flavor;
+        this.price = price;
     }
 
-    public Cake(){
+    public Cake() {
         setFlavor("Strawberry");
         setPrice(200);
     }
