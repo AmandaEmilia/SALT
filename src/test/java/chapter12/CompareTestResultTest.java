@@ -25,4 +25,14 @@ public class CompareTestResultTest {
         assertEquals(63, finalGrades.get("Jason")); // Original was 63, Makeup was 62 -> 63
         assertEquals(79, finalGrades.get("Nikolay"));
     }
+
+    @Test
+    void testSameGrades() {
+        Map<String, Integer> finalGrades = CompareTestResult.calculateFinalGrades();
+        for (String student : CompareTestResult.getOriginalGrades().keySet()) {
+            if (CompareTestResult.getOriginalGrades().get(student).equals(CompareTestResult.getMakeUpGrades().get(student))) {
+                assertEquals(CompareTestResult.getOriginalGrades().get(student), finalGrades.get(student));
+            }
+        }
+    }
 }
