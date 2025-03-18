@@ -1,16 +1,36 @@
 package se.salt.chapter12;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Collections {
 
     public static void main(String[] args) {
 
-        howToUseSet();
-        howToUseList();
+        //howToUseSet();
+        //howToUseList();
+        howToUseQueue();
+
+    }
+
+    private static void howToUseQueue() {
+        Queue<String> car = new LinkedList<>();
+        car.add("Volvo");
+        car.add("BMW");
+        car.add("SEAT");
+        car.add("Saab");
+        car.add("Mini");
+        car.add("Volvo");
+
+        System.out.println(car.size());
+        System.out.println(car);
+
+        car.remove(); //Remove from queue by First in, first out.
+        System.out.println(car);
+
+        System.out.println(car.peek()); //head of queue
+
+        car.forEach(bil -> System.out.println(bil));
+        car.forEach(System.out::println); //method reference
 
     }
 
@@ -33,7 +53,7 @@ public class Collections {
     }
 
     private static void howToUseSet() {
-        Set<String> car = new HashSet();
+        Set<String> car = new HashSet<>();
         car.add("Volvo");
         car.add("BMW");
         car.add("SEAT");
