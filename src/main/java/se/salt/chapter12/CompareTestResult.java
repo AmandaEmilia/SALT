@@ -5,6 +5,22 @@ import java.util.Map;
 
 public class CompareTestResult {
 
+    public static void main(String[] args){
+
+        Map<String, Integer> finalGrade = new HashMap<>();
+
+        for (var entry : getOriginalGrades().entrySet()) {
+            String student = entry.getKey();
+            int originalScore = entry.getValue();
+            int makeUpScore = getMakeUpGrades().getOrDefault(student, 0);
+
+            finalGrade.put(student, Math.max(originalScore, makeUpScore));
+        }
+
+        finalGrade.forEach((k,v)-> System.out.println("Final grade for " + k + " is " + v + " points"));
+
+    }
+
     public static Map<String, Integer> getOriginalGrades(){
 
         Map<String, Integer> grades = new HashMap<>();
