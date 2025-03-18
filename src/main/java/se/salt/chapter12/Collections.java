@@ -9,13 +9,13 @@ public class Collections {
 
     public static void main(String[] args) {
 
-        //howToUseSet();
+        howToUseSet();
         howToUseList();
 
     }
 
     private static void howToUseList() {
-        List car = new ArrayList<>();
+        List<String> car = new ArrayList<>(); //diamond operator to tell what type stored in this list
         car.add("Volvo");
         car.add("BMW");
         car.add("SEAT");
@@ -26,10 +26,14 @@ public class Collections {
         System.out.println(car.size()); // 6 bc all elements counts even if they are duplicates.
         System.out.println(car.get(1)); //index 1 will be BMW
         System.out.println(car);
+
+        for(String type: car){
+            System.out.println(type);
+        }
     }
 
     private static void howToUseSet() {
-        Set car = new HashSet();
+        Set<String> car = new HashSet();
         car.add("Volvo");
         car.add("BMW");
         car.add("SEAT");
