@@ -23,5 +23,10 @@ public class Collections {
         System.out.println(car.size()); // 5 bc all elements should be unique
         System.out.println(car);
 
+        var i = car.iterator();
+        while (i.hasNext()){
+            System.out.println(i.next());
+        }
+
     }
 }
