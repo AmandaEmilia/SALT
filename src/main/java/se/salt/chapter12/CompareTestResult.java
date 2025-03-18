@@ -5,7 +5,16 @@ import java.util.Map;
 
 public class CompareTestResult {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        getFinalGrades();
+    }
+
+    private static void getFinalGrades() {
+        Map<String, Integer> finalGrade = calculateFinalGrades();
+        finalGrade.forEach((k, v) -> System.out.println("Final grade for " + k + " is " + v + " points"));
+    }
+
+    public static Map<String, Integer> calculateFinalGrades() {
 
         Map<String, Integer> finalGrade = new HashMap<>();
 
@@ -17,11 +26,10 @@ public class CompareTestResult {
             finalGrade.put(student, Math.max(originalScore, makeUpScore));
         }
 
-        finalGrade.forEach((k,v)-> System.out.println("Final grade for " + k + " is " + v + " points"));
-
+        return finalGrade;
     }
 
-    public static Map<String, Integer> getOriginalGrades(){
+    public static Map<String, Integer> getOriginalGrades() {
 
         Map<String, Integer> grades = new HashMap<>();
         grades.put("Angie", 24);
@@ -39,7 +47,7 @@ public class CompareTestResult {
         return grades;
     }
 
-    public static Map<String, Integer> getMakeUpGrades(){
+    public static Map<String, Integer> getMakeUpGrades() {
 
         Map<String, Integer> grades = new HashMap<>();
         grades.put("Angie", 97);
