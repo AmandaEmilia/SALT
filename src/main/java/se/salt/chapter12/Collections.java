@@ -8,7 +8,32 @@ public class Collections {
 
         //howToUseSet();
         //howToUseList();
-        howToUseQueue();
+        //howToUseQueue();
+        howToUseMap();
+
+    }
+
+    private static void howToUseMap() {
+        Map<String, Integer> carYearInvented = new HashMap<>();
+        carYearInvented.put("BMW", 1917);
+        carYearInvented.put("Volvo", 1927);
+        carYearInvented.put("Seat", 1950);
+        carYearInvented.put("Saab93", 1956);
+        carYearInvented.put("Saab95", 1959);
+
+        System.out.println(carYearInvented);
+        System.out.println(carYearInvented.size());
+
+        System.out.println(carYearInvented.get("Seat")); //get value for key "Seat"
+
+        System.out.println(carYearInvented.entrySet()); //print
+
+        for (var entry : carYearInvented.entrySet()) {
+            System.out.println("Key: " + entry.getKey());
+            System.out.println("Value: " + entry.getValue());
+        }
+
+        carYearInvented.forEach((key, value) -> System.out.println("Car: " + key + " | Invented year: " + value));
 
     }
 
@@ -47,7 +72,7 @@ public class Collections {
         System.out.println(car.get(1)); //index 1 will be BMW
         System.out.println(car);
 
-        for(String type: car){
+        for (String type : car) {
             System.out.println(type);
         }
     }
