@@ -6,9 +6,9 @@ public class Collections {
 
     public static void main(String[] args) {
 
-        //howToUseSet();
-        //howToUseList();
-        //howToUseQueue();
+        howToUseSet();
+        howToUseList();
+        howToUseQueue();
         howToUseMap();
 
     }
@@ -54,7 +54,7 @@ public class Collections {
 
         System.out.println(car.peek()); //head of queue
 
-        car.forEach(bil -> System.out.println(bil));
+        //car.forEach(bil -> System.out.println(bil));
         car.forEach(System.out::println); //method reference
 
     }
